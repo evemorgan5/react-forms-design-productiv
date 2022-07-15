@@ -19,7 +19,7 @@ function EditableTodoList({todos, handleUpdate, handleRemove}) {
         {todos.map( todo => <EditableTodo
         todo={todo}
         handleUpdate={handleUpdate}
-        handleDelete={handleRemove}/>)}
+        handleRemove={handleRemove}/>)}
       </div>
   );
 }
