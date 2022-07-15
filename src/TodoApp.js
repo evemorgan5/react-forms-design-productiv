@@ -16,8 +16,9 @@ import TodoForm from "./TodoForm";
  * App -> TodoApp -> { TodoForm, EditableTodoList, //TODO: Add this to docstring TopTODO?? }
  */
 
-function TodoApp(initialTodos = []) {
+function TodoApp({initialTodos = []}) {
   const [todos, setTodos] = useState(initialTodos);
+  console.log("TodoApp", todos);
 
   /** add a new todo to list */
   function create(todo) {
