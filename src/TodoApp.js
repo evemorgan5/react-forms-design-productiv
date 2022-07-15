@@ -3,6 +3,7 @@ import { v4 as uuid } from "uuid";
 
 import TopTodo from "./TopTodo";
 import EditableTodoList from "./EditableTodoList";
+import TodoForm from "./TodoForm";
 
 /** App for managing a todo list.
  *
@@ -30,6 +31,7 @@ function TodoApp(initialTodos = []) {
   //TODO: Maybe after we work on form.
   function update(updatedTodo) {
     //Given an updatedTodo update a todo?
+
   }
 
   /** delete a todo by id */
@@ -37,18 +39,7 @@ function TodoApp(initialTodos = []) {
     // Find Todo obj in the Todos state array
     // Create a new array (Bc the ref needs to change for state to change)
     // Fill the new array with Everything except the todo obj containing that id.
-
-    [{todo},{todo},...]
-
-    // Filer!!!!
-    // todos.filter()
-    // Filter by those that dont have the id
-
-    //todos.filter ( todo => todos.id !== id)
-
-
-
-
+    setTodos(todos => todos.filter( todo => todo.id !== id));
   }
 
   return (
@@ -69,8 +60,7 @@ function TodoApp(initialTodos = []) {
 
           <section>
             <h3 className="mb-3">Add Nü</h3>
-            FIXME
-            {/**TODO: form component*/}
+            < TodoForm handleSave={create} />
           </section>
         </div>
 
