@@ -14,8 +14,6 @@ import EditableTodo from "./EditableTodo";
 function EditableTodoList({todos, handleUpdate, handleRemove}) {
   return (
       <div>
-        {/*   FIXME  */}
-        {/**FIXME: loop through each editable to do in todos array */}
         {todos.map( todo => <EditableTodo
         todo={todo}
         handleUpdate={handleUpdate}

@@ -21,7 +21,9 @@ function EditableTodo({todo, handleUpdate, handleRemove}) {
   function handleDelete(handleRemove) { }
 
   /** Edit form saved; toggle isEditing and update in ancestor. */
-  function handleSave(formData) { }
+  function handleSave(formData) {
+    const [formData, setFormData] = useState(formData);
+  }
 
   return (
       <div className="EditableTodo">
