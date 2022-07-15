@@ -54,6 +54,7 @@ function EditableTodo({ todo, handleUpdate, handleRemove }) {
           </button>
         </div>
         <Todo todo={todo}/>
+        {/* prop = {todo:{title:title,description:description}} */}
       </div>
 
       }
