@@ -9,12 +9,19 @@ import React, { useState } from "react";
  * { TodoApp, EditableTodo } -> TodoForm
  */
 
-function TodoForm({ initialFormData = { title: "", description: "", priority: 3 }, handleSave }) {
-  const defaultFormData = { title: "", description: "", priority: 3 }
+function TodoForm({
+  initialFormData = {
+    title: "",
+    description: "",
+    priority: 3
+  },
+  handleSave
+}) {
+  const defaultFormData = { title: "", description: "", priority: 3 };
   const [formData, setFormData] = useState(initialFormData);
 
   /** Update form input. */
-   /** Update local state w/curr state of input elem */
+  /** Update local state w/curr state of input elem */
   function handleChange(evt) {
     const { name, value } = evt.target;
     setFormData(fData => ({
