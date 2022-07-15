@@ -12,13 +12,13 @@ import TodoForm from "./TodoForm";
  * EditableTodoList -> EditableTodo -> { Todo, TodoForm }
  */
 
-function EditableTodo() {
+function EditableTodo({todo, handleUpdate, handleRemove}) {
 
   /** Toggle if this is being edited */
   function toggleEdit() { }
 
   /** Call remove fn passed to this. */
-  function handleDelete() { }
+  function handleDelete(handleRemove) { }
 
   /** Edit form saved; toggle isEditing and update in ancestor. */
   function handleSave(formData) { }

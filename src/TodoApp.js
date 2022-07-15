@@ -28,10 +28,20 @@ function TodoApp(initialTodos = []) {
 
 
   /** update a todo with updatedTodo */
-  //TODO: Maybe after we work on form.
   function update(updatedTodo) {
-    //Given an updatedTodo update a todo?
-
+    //Given an {updatedTodo}
+    //update that {Todo} in the [{Todo},{Todo},...]
+    //Constraints: Want the order to remain the same
+    // That to re-render we have to return a new [] reference
+    //Search for the {Todo} by the id of the {updatedTodo}
+    //Update the information in place
+    //List = [{Todo},{UpdatedTodo},...]
+    //But the array reference is still the same
+    //So create a new array of the spread List
+    // setTodos([...List])
+    setTodos(todos => todos.map( todo => (
+      todo.id === updatedTodo.id ? updatedTodo : todo)
+    ));
   }
 
   /** delete a todo by id */
@@ -47,15 +57,18 @@ function TodoApp(initialTodos = []) {
       <div className="row">
 
         <div className="col-md-6">
-          <EditableTodoList /> {/**TODO: OR should that be here */} OR
-          <span className="text-muted">You have no todos.</span>
+          { todos.length !== 0 ? <EditableTodoList
+          todos={todos}
+          handleUpdate={update}
+          handleRemove={remove}/> :
+          <span className="text-muted">You have no todos.</span>}
         </div>
 
         <div className="col-md-6">
           (if no top todo, omit this whole section)
           <section className="mb-4">
             <h3>Top Todo</h3>
-            <TopTodo />
+            <TopTodo todos={todos} />
           </section>
 
           <section>

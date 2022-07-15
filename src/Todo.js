@@ -2,7 +2,7 @@ import React from "react";
 
 /** Simple presentation component for a todo.
  *
- * Props:
+ * Prop:
  * - todo: like { id, title, description, priority }
  *
  * { EditableTodo, TopTodo } -> Todo
@@ -11,7 +11,7 @@ import React from "react";
 function Todo({title, description, priority}) {
   return (
       <div className="Todo">
-        <div><b>{title}</b> <small>{priority}</small></div>
+        <div><b>{title}</b><small>{priority}</small></div>
         <div><small>{description}.</small></div>
       </div>
   );

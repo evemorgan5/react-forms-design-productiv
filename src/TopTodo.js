@@ -4,7 +4,7 @@ import Todo from "./Todo";
 
 /** Shows the top todo.
  *
- * Props:
+ * Prop:
  * - todos
  *
  * TodoApp -> TopTodo -> Todo
