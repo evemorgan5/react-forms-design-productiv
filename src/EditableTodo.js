@@ -13,7 +13,7 @@ import TodoForm from "./TodoForm";
  */
 
 function EditableTodo({ todo, handleUpdate, handleRemove }) {
-  console.log("EditableTodo",todo);
+  console.log("EditableTodo",todo, "handleremove", handleRemove);
   //TODO: True or False State
   const [isEditing, setEditing] = useState(false);
 
@@ -24,7 +24,8 @@ function EditableTodo({ todo, handleUpdate, handleRemove }) {
 
   /** Call remove fn passed to this. */
   function handleDelete() {
-    handleRemove(todo.id)
+    console.log("todo", todo, todo.id);
+    handleRemove(todo.id);
    }
 
   /** Edit form saved; toggle isEditing and update in ancestor. */
